@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<h1 style="color: red">
+   {{my_fun()}}
+</h1>
+
+<h1 style="color: red">
+    {{var_one}}
+</h1>
+
+<div ng-controller="ctrl_one">
+    <p style="color:palegreen">
+        {{var_one}}
+    </p>
+</div>
+
+<div ng-controller="ctrl_two">
+    <p style="color:palegreen">
+        {{my_fun()}}
+    </p>
+</div>
+
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script>
+    var app = angular.module("app",[]);
+    app.controller("ctrl_one",ctrl_one);
+    ctrl_one.$inject = ["$scope","$rootScope"]
+    function ctrl_one($scope,$rootScope) {
+        $scope.var_one = "Message From Mongo DB Sooon..........";
+        $rootScope.var_two = "Message From Spring REst..........";
+        $rootScope.my_fun = function () {
+            return $scope.var_one +"....."+$scope.var_two;
+        }
+
+    }
+
+    app.controller("ctrl_two",ctrl_two);
+    ctrl_two.$inject = ["$scope","$rootScope"]
+    function ctrl_two($scope,$rootScope) {
+        $rootScope.my_fun = function () {
+            return $scope.var_one +"....."+$scope.var_two;
+        }
+
+    }
+
+
+</script>
+
+</html>

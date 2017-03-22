@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<!--
+Example to demonstrate difference between $scope and $rootScope
+-->
+
+<h1 style="color: pink" ng-bind="var_two">
+</h1>
+<div ng-controller="ctrl_one">
+    <p style="color: red" ng-bind="var_two"></p>
+</div>
+
+<div ng-controller="ctrl_two">
+    <p style="color: green" ng-bind="var_one"></p>
+</div>
+
+<h1 style="color: pink" ng-bind="var_one">
+</h1>
+
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script>
+    var app = angular.module("app",[]);
+
+    app.controller("ctrl_one",ctrl_one);
+    ctrl_one.$inject = ["$rootScope"];
+    function ctrl_one($rootScope) {
+        $rootScope.var_one = "Message from ctrl_one";
+    }
+
+    app.controller("ctrl_two",ctrl_two);
+    ctrl_two.$inject = ["$rootScope"];
+    function ctrl_two($rootScope) {
+        $rootScope.var_two = "Message from ctrl_two";
+    }
+
+
+</script>
+
+</html>

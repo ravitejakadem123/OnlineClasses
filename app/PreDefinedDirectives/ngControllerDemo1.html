@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<script src="bower_components/angular/angular.min.js"></script>
+<!--
+create  three controllers with parent child relation ship
+@paraent,
+@child,
+@sub
+"parent controller sholuld bind the paret variable
+-->
+<style type="text/css">
+    div{
+        width: 300px;
+        height: 200px;
+        color:green;
+        font-weight :bold;
+        text-align: center;
+        border: 1px solid;
+    }
+</style>
+<div ng-controller="parent">
+    <h1>{{var_one}}</h1>
+    <div ng-controller="child">
+        <h1>{{var_two}}</h1>
+        <div ng-controller="sub">
+            <h1>{{var_three}}</h1>
+        </div>
+    </div>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script>
+    var app = angular.module("app",[]);
+    app.controller("parent",parent);
+
+    parent.$inject =["$scope"];
+    function parent($scope) {
+        $scope.var_one = "Message from parent controller"
+    }
+
+    app.controller("child",child);
+    child.$inject =["$scope"];
+    function child($scope) {
+        $scope.var_two = "Message from child controller"
+    }
+
+    app.controller("sub",sub);
+    sub.$inject =["$scope"];
+    function sub($scope) {
+        $scope.var_three = "Message from sub controller"
+    }
+
+</script>
+
+</html>
