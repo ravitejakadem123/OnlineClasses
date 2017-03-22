@@ -1,0 +1,14 @@
+ng-click directive:
+
+
+when ever we click the user interface elements , automatically will executte by angular framework.
+
+Syntax:
+
+ng-click = "Expression" /"User defined Function" /"User defined function with optional parameters".
+
+Ex: ng-click = "count =count + 1"
+
+    ng-click ="login()"
+
+    ng-click = "login("admin","admin")"
