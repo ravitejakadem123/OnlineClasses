@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+<script src="bower_components/angular/angular.min.js"></script>
+<!--<select ng-model = "my_model" ng-options="x as x for x in data">
+    <option value="">&#45;&#45;&#45;&#45;Select One-&#45;&#45;</option>
+</select>-->
+<!--<select ng-model = "my_model" ng-options="x.id as x.name for x in data_one"></select>-->
+<!--<select ng-model = "my_model" ng-options="x.name as x.id for x in data_one"></select>
+<select ng-model = "my_model" ng-options="x.id as x.id for x in data_one"></select>-->
+<!--<select ng-model = "my_model" ng-options="x.name as x.name for x in data_one"></select>-->
+
+   <!-- <h1>
+        {{my_model}}
+    </h1>
+-->
+<select ng-model="my_model" ng-options="x as x.id for x in data_one"></select>
+
+<h1 ng-bind="my_model">
+
+</h1>
+
+
+<h1>
+    {{my_model.id+"......"+my_model.name}}
+
+</h1>
+
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl", ctrl);
+        ctrl.$inject = ["$scope"];
+        function ctrl($scope) {
+            $scope.data = ["Hello_1","Hello_2","Hello_3","Hello_4"];
+            $scope.data_one =[{id:10,name:"Raviteja"},{id:20,name:"KRT"},{id:30,name:"swaroop"},{id:40,name:"vamsi"}];
+
+        }
+    </script>
+
+
+
+</html>
