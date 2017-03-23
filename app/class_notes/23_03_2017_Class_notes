@@ -1,0 +1,14 @@
+ng-options (directive):
+
+
+Used to populate the values to the dropdown.
+
+Syntax:
+
+<select ng-model="my_model"
+ng-options=" 'model_value' as 'dropdown_value' for 'iteration_variable' in 'collection'">
+
+
+Ex:
+
+$scope.data = []
