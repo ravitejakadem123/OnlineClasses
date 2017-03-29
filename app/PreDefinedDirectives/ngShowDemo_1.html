@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"ng-app="app" ng-controller="ctrl">
+<script src="bower_components/angular/angular.min.js"></script>
+<h1 style="color: red" ng-repeat="x in data">
+    {{x}}
+    <button ng-if="$first" ng-show="true" ng-click="clickMe(x)">Click</button>
+    <button ng-if="$last" ng-show="true" ng-click="clickMe(x)">Click</button>
+</h1>
+
+<script>
+    var app = angular.module("app",[]);
+    app.controller("ctrl",ctrl);
+    ctrl.$inject = ["$scope"];
+    function ctrl($scope) {
+        $scope.data = [10,20,30,40,50];
+        $scope.clickMe = function (x) {
+            alert(x);
+        }
+    }
+</script>
+
+</html>

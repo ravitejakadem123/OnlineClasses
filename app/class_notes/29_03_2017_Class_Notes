@@ -1,0 +1,138 @@
+
+Custom Directive :
+
+creating our own directive based on Application requirement is called as Custom directive.
+
+In Angular JS we can use custom Directives in three ways:
+
+1)Element
+2)Attribute
+3)Class
+
+
+Ex:
+
+Custom Directive -- my_directive
+
+
+<my_directive></my_element> //Element level usage
+
+<div my_directive></div> //Attribute levele usage
+
+<div class="my_directive"></div> //CSS level usage
+
+
+
+properties of Custom Directives :
+
+1)restrict
+
+    -- It will describe how to use custom directive.
+
+    Ex:
+        app.directive("my_directive",my_directive);
+
+        function my_directive(){
+    reeturn {
+         restrict : "A"
+        }
+}
+
+<div my_directive></div>
+
+
+
+2) template
+
+    used to add the html to the custom directive
+
+    Ex:
+
+    app.directive("exampleDirective",exampleDirective);
+
+    function exampleDirective{
+        returrn {
+            restrict :"E",
+            template:"<b>This is Custom Directive</b>
+        }
+
+    }
+
+    Ex:
+
+    <example-directive></example-directive>
+
+
+
+   3)templateURL:
+
+   used to add the external template to the custom directive.
+
+   Ex:
+   ................................
+   templates
+
+           sample.html
+     ..............................
+     <b>This is Custom directive</b>
+
+     app.directive("exampleDirective",exampleDirective);
+
+    function exampleDirective(){
+        return {
+            restrict:"A"
+            templateUrl:"templates/sample.html"
+    }
+
+     }
+
+
+     <div example-directive></div>
+
+
+     4)controller.
+
+        used to define the controller for template of a custom directive.
+
+
+      Ex:
+
+
+      .........................
+      templates
+            sample.html
+       ........................
+
+      sample.html
+
+     {{var_one}}
+
+   ..........................
+   controllers
+        ctrl.js
+
+    ..........................
+    app.controller("ctrl",ctrl);
+    ctrl.$inject=["$scope"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

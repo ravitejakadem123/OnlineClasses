@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+<script src="bower_components/angular/angular.min.js"></script>
+<div ng-mouseup="up()" ng-mousedown="down()">
+    ngMouseUp && m=ngMouseDown
+</div>
+<div ng-mouseenter="enter()" ng-mouseleave="leave()">
+    ngMouseUp && m=ngMouseDown
+</div>
+
+<style>
+    div{
+        width: 300px;
+        height: 200px;
+        border: 1px solid tomato;
+        color: #2aabd2;
+        text-align: center;
+
+    }
+</style>
+
+
+<script>
+    var app = angular.module("app",[]);
+    app.controller("ctrl",ctrl);
+    ctrl.$inject = ["$scope"];
+    function ctrl($scope) {
+        $scope.up = function () {
+            console.log("Mouse Up")
+        };
+        $scope.down = function () {
+            console.log("Mouse Down")
+        };
+        $scope.enter = function () {
+            console.log("Mouse Enter")
+        };
+        $scope.leave = function () {
+            console.log("Mouse Leave")
+        };
+    };
+</script>
+
+</html>

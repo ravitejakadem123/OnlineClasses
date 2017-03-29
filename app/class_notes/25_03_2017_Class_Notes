@@ -1,0 +1,33 @@
+ng-class-odd :
+
+used to add the css class to the odd rows of table.
+
+ng-class-even:
+
+used to add the css class to the even rows of table.
+
+Syntax:
+
+ng-class-odd / ng-class-even = "css class"
+
+ng-if:
+
+Used to write the if conditions in Angular JS
+
+Syntx:
+
+ng-if="true"/"false"
+
+
+ng-show/ng-hide:
+
+-used to show / hide the elements based on the conditions
+
+
+syntax:
+
+ng-show/ng-hide = "true"/"false"
+
+
+
+

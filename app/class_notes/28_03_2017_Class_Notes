@@ -1,0 +1,63 @@
+ng-submit:
+
+-- used to submit the form at a time to the controller.
+
+Syntax:
+
+<form ng-submit="login_details()">
+//Form elements
+<input type = "submit"></input>
+</form>
+
+ng-switch:
+
+-used to write the switch cases in Angular Applications.
+
+Syntax:
+
+<div ng-switch="expression">
+    <div ng-switch-when="value_one">
+        ---
+        ---
+       </div>
+     <div ng-switch-when="value_two">
+            ---
+            ---
+           </div>
+            <div ng-switch-when="value_three">
+                   ---
+                   ---
+                  </di>
+                  <div ng-switch-default>
+                                     ---
+                                     ---
+                                    </div>
+</div>
+
+
+ng-cloak.
+
+-used to eliminate the t=flickering/blinking of web page before displaying result.
+
+
+Syntax:
+
+<div ng-cloak>
+
+</div>
+
+
+Mouse Events:
+
+when ever we perform the mouse events, automatically corresponding directives will be executed by Angular Framwework.
+
+
+
+Syntax:
+
+ng-mousedown/
+ng-mouseup/
+                    "User defined fuction"
+
+ng-mouseenter
+ng-mouseleave

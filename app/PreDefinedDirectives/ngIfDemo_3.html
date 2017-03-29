@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<script src="bower_components/angular/angular.min.js"></script>
+<form name="myForm">
+    <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
+    <input type="text"
+           name = "uname"
+           ng-minlength="3"
+           ng-model="uname"
+           ng-maxlength="6"
+           required>
+        <h5 ng-if="myForm.uname.$error.minlength">****User Name 3 Characters Required</h5>
+        <h5 ng-if="myForm.uname.$error.maxlength">****Password 6 Characters Allowed</h5>
+        <h5 ng-if="myForm.uname.$error.required">****Can't be Empty</h5>
+</form>
+
+</html>
