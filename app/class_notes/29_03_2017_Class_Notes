@@ -33,7 +33,7 @@ properties of Custom Directives :
         app.directive("my_directive",my_directive);
 
         function my_directive(){
-    reeturn {
+    return {
          restrict : "A"
         }
 }
@@ -51,9 +51,9 @@ properties of Custom Directives :
     app.directive("exampleDirective",exampleDirective);
 
     function exampleDirective{
-        returrn {
+        return {
             restrict :"E",
-            template:"<b>This is Custom Directive</b>
+            template:"<b>This is Custom Directive</b>"
         }
 
     }
@@ -87,6 +87,7 @@ properties of Custom Directives :
      }
 
 
+If we are having capital letter in second word we need to convert to small and place '-' in front of it.
      <div example-directive></div>
 
 
@@ -114,8 +115,28 @@ properties of Custom Directives :
     ..........................
     app.controller("ctrl",ctrl);
     ctrl.$inject=["$scope"]
+    function ctrl($scope){
+    $scope.var_one = "I am from Custom directive";
+    }
 
+.....................................
+directives
 
+    exampleDirectives.js
+
+    ...............................
+
+app.directive("exampleDirective",exampleDirective);
+function exampleDirective(){
+    return :"C",
+    templateUrl:"templates/ample.html",
+    controller:"ctrl"
+    }
+}
+
+.....................................................
+
+<div class="example-directive"></div>
 
 
 

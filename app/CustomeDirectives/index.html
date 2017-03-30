@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<script src="bower_components/angular/angular.min.js"></script>
+
+<!--
+<div class="glyphicon-align-center" example-directive></div>
+<br><br>
+<example-directive></example-directive>
+<br><br>
+<div class="example-directive"></div>
+-->
+<sample-directive></sample-directive>
+<div class="container sample-directive"></div>
+
+<script>
+    var app = angular.module("app",[]);
+    app.directive("exampleDirective",exampleDirective);
+    function exampleDirective() {
+        return{
+            restrict : "AEC",
+            template :"<div class='jumbotron'><b>Example Directive Demo</b></div>"
+        };
+    };
+
+    app.directive("sampleDirective",sampleDirective);
+    function sampleDirective() {
+        return{
+            restrict:"EC",
+            templateUrl:"sample.html",
+            controller:"ctrl"
+        };
+    };
+
+    app.controller("ctrl",ctrl);
+    ctrl.$inject = ["$scope"];
+    function ctrl($scope) {
+        $scope.var_one = "From Custome Controller";
+    }
+</script>
+
+</html>
