@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<script src="../bower_components/angular/angular.min.js"></script>
+<div ng-controller="ctrl_one">
+    <button ng-click="setData('For Controller through Custom Service')">Set Data</button>
+
+</div>
+
+<div ng-controller="ctrl_two">
+    <button ng-click="getData()">Get Data</button>
+    <h1 style="color: red">{{var_one}}</h1>
+</div>
+
+<script>
+    var app = angular.module("app",[]);
+    app.controller("ctrl_one",ctrl_one);
+    ctrl_one.$inject = ["$scope","my_service"];
+    function ctrl_one($scope,my_service) {
+        $scope.setData = function (data) {
+            console.log(data);
+            my_service.setVarOne(data);
+        };
+
+    };
+
+    app.controller("ctrl_two",ctrl_two);
+    ctrl_two.$inject = ["$scope","my_service"];
+    function ctrl_two($scope,my_service) {
+        $scope.getData= function () {
+            $scope.var_one = my_service.getVarOne();
+        };
+    };
+
+
+    app.service("my_service",my_service);
+    function my_service() {
+        this.var_one = "";
+        this.setVarOne = function (data) {
+            this.var_one = data;
+        };
+        this.getVarOne = function () {
+            return this.var_one;
+        };
+    };
+</script>
+
+</html>

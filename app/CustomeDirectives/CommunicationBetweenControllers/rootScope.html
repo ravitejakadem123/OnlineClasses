@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<script src="../bower_components/angular/angular.min.js"></script>
+<div ng-controller="ctrl_one">
+    <button ng-click="clickMe()">Click</button>
+
+</div>
+<div ng-controller="ctrl_two">
+    <h1 style="color: red">{{var_one}}</h1>
+</div>
+
+<script>
+    var app = angular.module("app",[]);
+    app.controller("ctrl_one",ctrl_one);
+    ctrl_one.$inject = ["$scope"];
+    function ctrl_one($scope) {
+        $scope.clickMe = function () {
+            $scope.my_fun("For Controller two");
+        }
+    }
+
+    app.controller("ctrl_two",ctrl_two);
+    ctrl_two.$inject = ["$rootScope","$scope"];
+    function ctrl_two($rootScope,$scope) {
+        $rootScope.my_fun = function (data) {
+            $scope.var_one = data;
+        };
+    };
+</script>
+</html>

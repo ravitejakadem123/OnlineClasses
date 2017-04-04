@@ -1,0 +1,11 @@
+
+rootScope:
+
+Communication between the controllers using rootScope.
+
+services:
+
+Communication between controllers by using custom services
+
+
+
