@@ -1,0 +1,21 @@
+1.$http:
+
+Is used to server get and post etc services
+
+2.$q
+
+Is used to eliminate the duplicate code
+
+By using $q we can achieve asynchronous communication[separating all function calls by using $q].
+
+3.$timeout:
+
+By using this we can set the time to execute a function before or after .
+
+4.$interval
+
+Used to repeat the function for interval time.
+
+5.$location
+
+used to locate the absolute path o application etc.

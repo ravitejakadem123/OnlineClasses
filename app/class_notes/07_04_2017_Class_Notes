@@ -1,0 +1,28 @@
+--Loading the Target page to source page without refreshing the whole web page is called single page application.
+
+--Loading the target page to source page is called as Routing.
+
+--In Angular JS we can Achieve Routing's in two ways.
+
+    1.ngRoute
+    2.ui.router
+
+ Steps to design the single page application by using ngRoute Module.
+
+ 1.Download the ngRoute Module by using bower.
+ 2.Add the ngRoute dependency
+ 3.create two templates
+ 4.create the controllers (two).
+ 5.Do the Mappings:
+
+       Rules of Mappings
+       1.mapping should be do in config phase
+       2.mapping should be in the form of a key && value pairs
+            --keys are the user defined keys (key should be start with '/').
+            --keys should be in source template.(index.html)
+
+   to meet this two rules we need to dependent on predefined object
+
+   6.create the source template.
+
+

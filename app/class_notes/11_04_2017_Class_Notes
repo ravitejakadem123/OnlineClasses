@@ -1,0 +1,20 @@
+Node JS:
+
+Node JS is a server side technology.
+By using Node JS we can create our own servers.
+By using Node JS we can create both http and tcp servers
+we can assign the user defined port number to the server.
+
+
+Modules in Node JS:
+
+1.express
+    -- used to develop the rest api.
+2.body-parser
+    --used to set the MIME Type.
+3.mysql module:
+    -- used to interact with the mysql database.
+4.mongodb
+    -- used to interact with the MongoDB.
+5.jwt-simple
+    -- used to maintain the Token based Authentication system.

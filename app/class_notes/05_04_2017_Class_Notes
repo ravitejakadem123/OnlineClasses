@@ -1,0 +1,52 @@
+app.factory():
+..............
+
+This custom service doesn't dependent's on any predefined function, it is used to return any object.
+
+
+
+    var objFunction = function(data){
+     this.var_one=data;
+     this.my_fun = function () {
+     return this.var_one;
+     };
+     }
+ app.factory("my_service",my_service);
+     function my_service() {
+     return new objFunction("I am from Factory").my_fun();
+     };
+
+
+app.value():
+.........
+
+Is used to set value for any service
+
+Ex:
+     app.value("my_service","First Value");
+     app.value("my_service","Second Value"); --> This line will override above Line
+
+     O/p: Second Value
+
+app.constant():
+..............
+
+Is is used to set constant for any service.
+
+
+Ex:
+
+     app.constant("my_service","First Value");
+     app.constant("my_service","Second Value");--> Here this line can't override above line .
+
+     O/p: First Value.
+
+
+  app.service():
+  .............
+
+  Is used to create custom service.
+
+
+
+

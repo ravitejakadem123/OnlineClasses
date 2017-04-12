@@ -14,7 +14,7 @@ ng-if:
 
 Used to write the if conditions in Angular JS
 
-Syntx:
+Syntax:
 
 ng-if="true"/"false"
 

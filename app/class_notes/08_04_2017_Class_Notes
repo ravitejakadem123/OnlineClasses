@@ -1,0 +1,16 @@
+ui-route module:
+
+
+Limitations of ng-route module:
+
+-->ng-Route wont support nested routing.
+-->ng-Route wont support named views concept
+-->if i want to pass json object as route parameter so we need to use ui-router module.
+
+so we need to use ui-router module.
+
+
+$urlRouteProvider:
+
+to use default page in congig function we need to use this $urlRouteProvider.
+
